@@ -1,0 +1,7 @@
+.element__vector_active {
+    background: url("../../../../images/likeactive.svg") no-repeat;
+}
+
+.element__vector_active:hover {
+    opacity: 1;
+}

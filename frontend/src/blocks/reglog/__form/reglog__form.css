@@ -1,0 +1,20 @@
+.reglog__form{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border: 0;
+    min-width: 358px;
+    padding: 0 0 30px 0;
+    align-items: center;
+}
+
+.reglog__form:last-of-type {
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .reglog__form {
+      max-width: 238px;
+    }
+  }
+  

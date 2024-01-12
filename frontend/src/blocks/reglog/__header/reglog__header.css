@@ -1,0 +1,18 @@
+.reglog__header{
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 358px;
+    margin-block: 0;
+    margin-inline: 0;
+    padding: 19px 0 49px 0;
+}
+
+@media screen and (max-width: 767px) {
+.reglog__header {
+  font-size: 18px;
+  line-height: 22px;
+  max-width: 238px;
+  padding-bottom: 75px;
+}
+}

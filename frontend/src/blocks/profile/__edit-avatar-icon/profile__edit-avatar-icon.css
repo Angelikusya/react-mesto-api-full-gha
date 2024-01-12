@@ -1,0 +1,17 @@
+.profile__edit-avatar-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../../images/editAvatar.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; 
+}
+
+
+.profile__edit-avatar:hover .profile__edit-avatar-icon {
+  opacity: 1;
+}

@@ -1,0 +1,20 @@
+.reglog__button {
+    width: 358px;
+    height: 50px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    margin-top: 11px;
+    border: 0;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 187px 0 0  0;
+  }
+  
+  .reglog__button:hover {
+      opacity: 0.8;
+  }
+  

@@ -1,0 +1,24 @@
+.profile__edit-avatar {
+  height: 120px;
+  width: 120px;
+  grid-column: 1;
+  grid-row: 1;
+  background: none;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1023px) {
+  .profile__edit-avatar {
+      margin: 0 auto 26px auto;
+  }
+} 
+
+.profile__edit-avatar:hover .profile__avatar {
+  opacity: 0.2;
+}

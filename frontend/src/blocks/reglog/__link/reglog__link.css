@@ -1,0 +1,13 @@
+.reglog__link {
+   cursor: pointer; 
+   margin-top: 15px;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 17px;
+   text-decoration: none; 
+   color: #CCCCCC;
+}
+
+.reglog__link:hover {
+    opacity: 0.8;
+}

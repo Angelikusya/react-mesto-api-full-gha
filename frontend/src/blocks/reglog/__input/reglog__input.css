@@ -1,0 +1,21 @@
+.reglog__input {
+    border: 0;
+    min-width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 14px;
+    line-height: 14px;
+    color: #CCCCCC;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    padding:0 0 9px;
+    background-color: rgba(0, 0, 0); /* фон */
+    background-color: transparent;
+}
+
+        
+@media screen and (max-width: 767px) {
+    .reglog__input {
+        max-width: 238px;
+    }
+  }

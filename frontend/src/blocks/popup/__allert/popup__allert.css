@@ -1,0 +1,8 @@
+.popup__allert {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 358px;
+    margin: 33px 0 calc(60px - 36px) 0;
+    text-align: center;
+}
