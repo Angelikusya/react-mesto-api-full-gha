@@ -16,7 +16,6 @@ const {
   PORT = 3001,
   MONGO_URL = 'mongodb://localhost:27017/mestodb',
 } = process.env; // Слушаем 3000 порт, подключаем базу данных
-console.log(process.env.NODE_ENV);
 
 mongoose.connect(`${MONGO_URL}`)
   .then(() => console.log('база данных подключена'))
