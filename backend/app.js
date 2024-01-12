@@ -27,12 +27,12 @@ app.use(requestLogger); // подключаем логгер запросов
 // app.use(cookieParser());
 
 app.use(helmet());
-app.get ("/crash-test", () => {
+app.get('/crash-test', () => {
   setTimeout(() => {
-    throw new Error("Сервер сейчас упадет")
+    throw new Error('Сервер сейчас упадет');
   }, 0);
 });
-console.log("crash-test")
+console.log('crash-test');
 app.use(router);
 
 app.use(errorLogger); // подключаем логгер ошибок
