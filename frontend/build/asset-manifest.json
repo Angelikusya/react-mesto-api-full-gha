@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mesto-react/static/css/main.12f324b2.css",
-    "main.js": "/mesto-react/static/js/main.d46d8b3a.js",
+    "main.css": "/mesto-react/static/css/main.dae76e65.css",
+    "main.js": "/mesto-react/static/js/main.0f99b01a.js",
     "static/js/787.5530211c.chunk.js": "/mesto-react/static/js/787.5530211c.chunk.js",
     "static/media/Inter-Medium.woff": "/mesto-react/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/mesto-react/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -12,7 +12,9 @@
     "static/media/logo.svg": "/mesto-react/static/media/logo.03b78ada3425e9132ff3db7ea8f4a6f6.svg",
     "static/media/like.svg": "/mesto-react/static/media/like.87ed371465c7a6a1cd01.svg",
     "index.html": "/mesto-react/index.html",
+    "static/media/Fail.svg": "/mesto-react/static/media/Fail.df8eddf661ff88f2d0efd3d570d14309.svg",
     "static/media/Trash.svg": "/mesto-react/static/media/Trash.823b0cf1b0b7e9cb7cad.svg",
+    "static/media/success.svg": "/mesto-react/static/media/success.1b6082f862eac35e2514460237d96ecc.svg",
     "static/media/likeactive.svg": "/mesto-react/static/media/likeactive.fe17a515669479b1e649.svg",
     "static/media/Edit.svg": "/mesto-react/static/media/Edit.8667ac4a523e8fc42e59.svg",
     "static/media/editAvatar.svg": "/mesto-react/static/media/editAvatar.a086f758840ae814ecde.svg",
@@ -20,12 +22,12 @@
     "static/media/Add.svg": "/mesto-react/static/media/Add.d86bb2edc2f6eadb96b7.svg",
     "static/media/Addsmall.svg": "/mesto-react/static/media/Addsmall.54b1426515811a15ebaf.svg",
     "static/media/closebuttonsmall.svg": "/mesto-react/static/media/closebuttonsmall.b793e07c3f4c19e26c11.svg",
-    "main.12f324b2.css.map": "/mesto-react/static/css/main.12f324b2.css.map",
-    "main.d46d8b3a.js.map": "/mesto-react/static/js/main.d46d8b3a.js.map",
+    "main.dae76e65.css.map": "/mesto-react/static/css/main.dae76e65.css.map",
+    "main.0f99b01a.js.map": "/mesto-react/static/js/main.0f99b01a.js.map",
     "787.5530211c.chunk.js.map": "/mesto-react/static/js/787.5530211c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12f324b2.css",
-    "static/js/main.d46d8b3a.js"
+    "static/css/main.dae76e65.css",
+    "static/js/main.0f99b01a.js"
   ]
 }

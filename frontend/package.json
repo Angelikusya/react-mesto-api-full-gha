@@ -15,7 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build && scr -r ./build/* anzhelika@158.160.105.130:home/anzhelika/frontend",
+    "predeploy": "npm run build && scp -r ./build/* anzhelika@158.160.105.130:/home/anzhelika/frontend",
     "deploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
