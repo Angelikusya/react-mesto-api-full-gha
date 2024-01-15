@@ -1,3 +1,4 @@
+const { ValidationError, CastError } = require('mongoose').Error;
 const bcrypt = require('bcrypt');
 const userModel = require('../models/user');
 const generateToken = require('../utils/jwt');
@@ -26,12 +27,7 @@ const getUser = (req, res, next) => {
       }
       return res.status(STATUS_OK).send(user);
     })
-    .catch((error) => {
-      if (error.name === 'CastError') {
-        return next(new BadRequestError('Переданы некорректные данные при работе с пользователем'));
-      }
-      return next(error);
-    });
+    .catch(() => next());
 };
 
 // получить пользователя по определенному ID
@@ -47,7 +43,7 @@ const getUserByID = (req, res, next) => {
         .send(user);
     })
     .catch((error) => {
-      if (error.name === 'CastError') {
+      if (error instanceof CastError) {
         return next(new BadRequestError('Переданы некорректные данные при работе с пользователем'));
       }
       return next(error);
@@ -73,7 +69,7 @@ const createUser = (req, res, next) => {
         email: user.email,
       }))
     .catch((error) => {
-      if (error.name === 'ValidationError') {
+      if (error instanceof ValidationError) {
         return next(new BadRequestError('Переданы некорректные данные при работе с пользователем'));
       } if (error.code === 11000) {
         return next(new ConflictError('Пользователь с такими данными уже существует'));
@@ -93,7 +89,7 @@ const updateUserInfo = (req, res, next) => {
         .send(user);
     })
     .catch((error) => {
-      if (error.name === 'ValidationError') {
+      if (error instanceof ValidationError) {
         return next(new BadRequestError('Переданы некорректные данные при работе с пользователем'));
       }
       return next(error);
@@ -109,7 +105,7 @@ const updateUserAvatar = (req, res, next) => {
       res.status(STATUS_OK).send(user);
     })
     .catch((error) => {
-      if (error.name === 'CastError') {
+      if (error instanceof CastError) {
         return next(new BadRequestError('Переданы некорректные данные при работе с пользователем'));
       }
       return next(error);
@@ -137,9 +133,7 @@ const login = (req, res, next) => {
             .send({ token });
         });
     })
-    .catch((error) => {
-      next(error);
-    });
+    .catch(() => next());
 };
 
 module.exports = {

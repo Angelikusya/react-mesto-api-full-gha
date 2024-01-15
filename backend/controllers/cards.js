@@ -1,3 +1,4 @@
+const { ValidationError, CastError } = require('mongoose').Error;
 const cardModel = require('../models/cards');
 const BadRequestError = require('../errors/BadRequestError');
 const NotFoundedError = require('../errors/NotFoundedError');
@@ -12,9 +13,7 @@ const getCards = (req, res, next) => {
     .then((cards) => res
       .status(STATUS_OK)
       .send(cards))
-    .catch((error) => {
-      next(error);
-    });
+    .catch(() => next());
 };
 
 // создать новую карточку
@@ -25,7 +24,7 @@ const createCard = (req, res, next) => {
       .status(STATUS_CREATED)
       .send(card))
     .catch((error) => {
-      if (error.name === 'ValidationError') {
+      if (error instanceof ValidationError) {
         next(new BadRequestError('Переданы некорректные данные при работе с карточкой'));
       } else {
         next(error);
@@ -44,17 +43,17 @@ const deleteCard = (req, res, next) => {
       if (card.owner.toString() !== req.user._id) {
         return next(new ForbiddenError('Карточка с указанным ID не найдена'));
       }
-      return cardModel.deleteOne(card._id)
+      return card.deleteOne()
         .then(() => res
           .status(STATUS_OK)
           .send(card))
         .catch((err) => next(err));
     })
     .catch((error) => {
-      if (error.name === 'CastError') {
+      if (error instanceof CastError) {
         next(new BadRequestError('Переданы некорректные данные при работе с карточкой'));
       }
-      next(error);
+      return next(error);
     });
 };
 
@@ -72,13 +71,13 @@ const likeCard = (req, res, next) => {
       }
       res
         .status(STATUS_OK)
-        .send( card );
+        .send(card);
     })
     .catch((error) => {
-      if (error.name === 'CastError') {
+      if (error instanceof CastError) {
         next(new BadRequestError('Переданы некорректные данные при работе с карточкой'));
       }
-      next(error);
+      return next(error);
     });
 };
 
@@ -96,10 +95,10 @@ const deleteLikeCard = (req, res, next) => {
       return res.status(STATUS_OK).send(card);
     })
     .catch((error) => {
-      if (error.name === 'CastError') {
+      if (error instanceof CastError) {
         next(new BadRequestError('Переданы некорректные данные при работе с карточкой'));
       }
-      next(error);
+      return next(error);
     });
 };
 

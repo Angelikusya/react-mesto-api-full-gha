@@ -35,10 +35,6 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
-      validate: {
-        validator: (v) => validator.isStrongPassword(v),
-        message: 'Пароль должен содержать как минимум 8 символов, включая по крайней мере одну заглавную букву, одну строчную букву, одну цифру и один специальный символ',
-      },
       select: false,
     },
   },
