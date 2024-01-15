@@ -12,15 +12,15 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { router } = require('./routes');
 
 const app = express();
-const {
-  PORT = 3001,
-  MONGO_URL = 'mongodb://localhost:27017/mestodb',
-} = process.env; // Слушаем 3000 порт, подключаем базу данных
-console.log(process.env.NODE_ENV);
+const PORT = process.env.PORT;
+const MONGO_URL = process.env.MONGO_URL;
+
+// console.log("я обновлен");
 
 mongoose.connect(`${MONGO_URL}`)
   .then(() => console.log('база данных подключена'))
   .catch((err) => console.error(err));
+
 
 app.use(express.json());
 app.use(cors());
