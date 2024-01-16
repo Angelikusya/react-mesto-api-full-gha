@@ -105,7 +105,7 @@ export default class Api {
 
 // вызов Api
 const api = new Api ({
-    baseUrl: "https://api.mesto-angelikusya.nomoredomainsmonster.ru",
+    baseUrl: "http://localhost:3001",
 });
 
 export {api};
