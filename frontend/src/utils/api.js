@@ -14,11 +14,11 @@ export default class Api {
     getInitialCards() {
         return fetch (`${this.baseUrl}/cards`, {
             headers: {
-                'Authorization': `Bearer ${localStorage.getItem('token')}`,   
-            }   
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            }
         })
         .then(this._checkResponse)
-    } 
+    }
 
     //подтягиваем имя и работу
     getUserInfo() {
@@ -40,7 +40,7 @@ export default class Api {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                name, 
+                name,
                 about,
             })
         })
@@ -75,9 +75,9 @@ export default class Api {
                 link: link
             })
         })
-        .then(this._checkResponse) 
+        .then(this._checkResponse)
     }
-    
+
     // удаляем карточку с сервера
     removeCard(cardId) {
         return fetch(`${this.baseUrl}/cards/${cardId}`, {
