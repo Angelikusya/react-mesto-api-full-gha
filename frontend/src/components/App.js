@@ -161,8 +161,6 @@ function App() {
       .catch((err) => console.error(`Ошибка: ${err}`))
   }
 
-  
-
   function closeAllPopups() {
     setEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
