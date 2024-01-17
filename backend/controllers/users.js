@@ -129,9 +129,6 @@ const login = (req, res, next) => {
             return next(new UnauthorizedError('Необходима авторизация'));
           }
           const token = generateToken({ _id: user._id });
-          console.log(JWT_SECRET);
-          console.log(token);
-
           // res.cookie('token', token, { httpOnly: true });
           return res
             .status(STATUS_OK)
